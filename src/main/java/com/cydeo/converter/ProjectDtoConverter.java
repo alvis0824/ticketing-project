@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationPropertiesBinding
-public class ProjectConverter implements Converter<String, ProjectDTO>{
+public class ProjectDtoConverter implements Converter<String, ProjectDTO>{
         private final ProjectService projectService;
 
-    public ProjectConverter(ProjectService projectService) {
+    public ProjectDtoConverter(ProjectService projectService) {
         this.projectService = projectService;
     }
 

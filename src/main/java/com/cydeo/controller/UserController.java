@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -30,7 +32,7 @@ public class UserController {
     }
 
     @PostMapping("/create")
-    public String insertUser(@ModelAttribute("user") UserDTO user){
+    public String insertUser(@Valid @ModelAttribute("user") UserDTO user){
 
         userService.save(user);
 
@@ -49,7 +51,7 @@ public class UserController {
     }
 
     @PostMapping("/update")
-    public String updateUser(@ModelAttribute("user") UserDTO user){
+    public String updateUser(@Valid @ModelAttribute("user") UserDTO user){
         //update that user
         userService.update(user);
 
