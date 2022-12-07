@@ -18,6 +18,9 @@ public class UserDtoConverter implements Converter<String, UserDTO> {
 
     @Override
     public UserDTO convert(String username) {
+        if (username == null || username.equals("")) {
+            return null;
+        }
         return userService.findById(username);
     }
 }

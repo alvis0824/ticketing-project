@@ -37,7 +37,7 @@ public class UserDTO {
     @NotNull
     private RoleDTO role;
 
-    @NotNull
+//    @NotNull
     private Gender gender;
 
 }
